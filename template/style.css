@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.6;
+    background-color: white;
+    color: #000;
+    display: flex;
+}
+
+/* Vertical Navigation Bar */
+.menu {
+    width: 80px;
+    height: 100vh;
+    background-color: #000;
+    padding: 2rem 0;
+    position: fixed;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    color: white;
+}
+
+.menu:hover {
+    width: 200px;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.link:hover, .link.active {
+    background-color: #333;
+}
+
+.link-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.link-title {
+    margin-left: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.menu:hover .link-title {
+    opacity: 1;
+}
+
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    margin-left: 80px;
+    width: calc(100% - 80px);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    color: #000;
+    font-size: 2.5rem;
+}
+
+/* From Uiverse.io by e-coders */ 
+button {
+    appearance: none;
+    background-color: transparent;
+    border: 0.125em solid #000;
+    border-radius: 0.9375em;
+    box-sizing: border-box;
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 3.75em;
+    min-width: 0;
+    outline: none;
+    padding: 1em 2.3em;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+}
+
+button:disabled {
+    pointer-events: none;
+}
+
+button:hover {
+    color: #fff;
+    background-color: #000;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+button:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+/* Note Form Styles */
+.note-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.note-form.hidden {
+    display: none;
+}
+
+.note-input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #000;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.note-textarea {
+    width: 100%;
+    height: 200px;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #000;
+    border-radius: 4px;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.note-input:focus, .note-textarea:focus {
+    outline: none;
+    border-color: #000;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.note-textarea {
+    min-height: 150px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.note-card {
+    background-color: white;
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.note-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.note-card h3 {
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.note-card p {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.note-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.note-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    color: #666;
+}
+
+.date {
+    font-size: 0.9rem;
+    color: #666;
+    margin-right: 1rem;
+}
+
+.actions {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.icon-btn {
+    min-height: unset;
+    padding: 0.5em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.icon-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+.edit-btn:hover {
+    border-color: #000;
+    background-color: #000;
+}
+
+.delete-btn:hover {
+    border-color: #000;
+    background-color: #000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .notes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .note-form {
+        padding: 1rem;
+    }
+    
+    .actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
