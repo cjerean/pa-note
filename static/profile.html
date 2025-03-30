@@ -6,13 +6,23 @@
     <title>Note App Profile</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 relative min-h-screen flex items-center justify-center py-10">
-    <a href="Panote.html" class="absolute top-4 left-4 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors flex items-center">
+<body
+<body class="bg-gray-100 relative min-h-screen flex flex-col items-center justify-center py-10">
+    <a href="Panote.html" 
+       class="absolute top-4 left-4 bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors flex items-center">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 
+                    1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
         </svg>
-        home
+        Home
     </a>
+
+    
+    <div class="w-full max-w-md bg-white shadow-lg rounded-lg overflow-hidden p-6 text-center">
+        <h1 class="text-2xl font-bold text-gray-800">Profile Page</h1>
+    </div>
+</body>
+
     <div class="w-full max-w-md bg-white shadow-lg rounded-lg overflow-hidden">
         <!-- Tab Navigation -->
         <div class="flex border-b">
@@ -50,11 +60,11 @@
                         alt="" 
                         class="w-32 h-32 rounded-full mb-4 object-cover"
                     >
-                    <h2 class="text-2xl font-bold text-gray-800">Emma Rodriguez</h2>
+                    <h2 class="text-2xl font-bold text-gray-800"> Erol John "may balat sa pwet" Nool</h2>
                     <div class="w-full mt-4">
                         <div class="mb-2">
                             <strong class="text-gray-700">Email:</strong>
-                            <p class="text-gray-600">emma.rodriguez@notesapp.com</p>
+                            <p class="text-gray-600">ejsupotmaybalatsapwet@panotesapp.ph</p>
                         </div>
                         <div>
                             <strong class="text-gray-700">Notes Created:</strong>
@@ -65,69 +75,67 @@
             </div>
 
             <!-- Edit Profile Tab -->
-            <div id="editProfileTab" class="tab-content hidden">
-                <form class="space-y-4">
-                    <div>
-                        <label class="block text-gray-700 mb-2" for="name">Full Name</label>
-                        <input 
-                            type="text" 
-                            id="name" 
-                            class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            value=""
-                        >
-                    </div>
-                    <div>
-                        <label class="block text-gray-700 mb-2" for="email">Email</label>
-                        <input 
-                            type="email" 
-                            id="email" 
-                            class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            value=""
-                        >
-                    </div>
-                    <button 
-                        type="submit" 
-                        class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition-colors"
-                    >
-                        Save Profile Changes
-                    </button>
-                </form>
-            </div>
-
-           <!-- User Settings Tab -->
-            
-
-                        <!-- Account Actions -->
-                        <div class="space-y-4">
-                            <button 
-                                onclick="updatePassword()"
-                                class="w-full bg-blue-500 text-white py-3 rounded-md hover:bg-blue-600 transition-colors text-xl"
-                            >
-                                Update Password
-                            </button>
-                            
-                            <div class="border-t pt-6">
-                                <h4 class="text-xl font-semibold mb-4 text-gray-800">Account Switching</h4>
-                                <button 
-                                    onclick="switchAccount()"
-                                    class="w-full bg-green-500 text-white py-3 rounded-md hover:bg-green-600 transition-colors text-xl mb-4"
-                                >
-                                    Switch Account
-                                </button>
-                                <button 
-                                    onclick="logout()"
-                                    class="w-full bg-red-500 text-white py-3 rounded-md hover:bg-red-600 transition-colors text-xl"
-                                >
-                                    Logout
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div id="editProfileTab" class="tab-content hidden">
+    <form class="space-y-4">
+        <div>
+            <label class="block text-gray-700 mb-2" for="name">Full Name</label>
+            <input 
+                type="text" 
+                id="name" 
+                class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                value="  "
+            >
         </div>
+        <div>
+            <label class="block text-gray-700 mb-2" for="email">Email</label>
+            <input 
+                type="email" 
+                id="email" 
+                class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                value=""
+            >
+        </div>
+        <div>
+            <button 
+    type="submit" 
+    class="w-full bg-black text-white py-2 rounded-md hover:bg-gray-800 transition-colors"
+>
+    Save Profile Changes
+</button>
 
-        <!-- Existing JavaScript remains the same -->
+        </div>
+    </form>
+</div>
+
+<!-- User Settings Tab -->
+<div id="userSettingsTab" class="tab-content hidden">
+    <div class="space-y-4">
+        <button 
+            onclick="updatePassword()"
+            class="w-full bg-black text-white py-3 rounded-md hover:bg-gray-800 transition-colors text-xl"
+        >
+            Update Password
+        </button>
+
+        <div class="border-t pt-6">
+            <h4 class="text-xl font-semibold mb-4 text-gray-800">Account Switching</h4>
+            <button 
+                onclick="switchAccount()"
+                class="w-full bg-black text-white py-3 rounded-md hover:bg-gray-800 transition-colors text-xl mb-4"
+            >
+                Switch Account
+            </button>
+            <button 
+                onclick="logout()"
+                class="w-full bg-black text-white py-3 rounded-md hover:bg-gray-800 transition-colors text-xl"
+            >
+                Logout
+            </button>
+        </div>
+    </div>
+</div>
+
+      
         <script>
             function updatePassword() {
                 const currentPassword = document.getElementById('currentPassword').value;
@@ -145,17 +153,17 @@
                     return;
                 }
 
-                // TODO: Implement actual password update logic
+        
                 alert('Password update functionality not implemented');
             }
 
             function switchAccount() {
-                // TODO: Implement account switching logic
+               
                 alert('Account switching functionality not implemented');
             }
 
             function logout() {
-                // TODO: Implement logout logic
+                
                 alert('Logout functionality not implemented');
             }
         </script>
